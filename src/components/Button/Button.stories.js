@@ -1,10 +1,26 @@
 import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { withKnobs, select } from '@storybook/addon-knobs';
 import Button from './Button';
 
-export default {
-  title: 'Components/Button',
-  component: Button,
+const label = 'Colors';
+
+const options = {
+  Primary: 'hsl(49, 100%, 58%)',
+  Secondary: 'hsl(196, 83%, 75%)',
+  Tertiary: 'hsl(106, 47%, 64%)',
 };
 
-export const Primary = () => <Button>Primary</Button>;
-export const Secondary = () => <Button secondary>Secondary</Button>;
+const defaultValue = 'hsl(49, 100%, 58%)';
+const groupId = 'GROUP-ID1';
+
+const value = select(label, options, defaultValue, groupId);
+
+storiesOf('Button', module)
+  .addDecorator(withKnobs)
+  .add('Primary', () => <Button color={value}>Hello Hutas</Button>)
+  .add('Secondary', () => (
+    <Button secondary color={value}>
+      Hello Szutas
+    </Button>
+  ));
