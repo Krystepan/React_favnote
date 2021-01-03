@@ -5,24 +5,22 @@ import Card from './Card';
 export default {
   component: Card,
   title: '/Molecules/Card',
+  cardType: 'note',
 };
 
 const Template = (args) => <Card {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  search: false,
-  activeColor: 'primary',
+export const Note = Template.bind({});
+Note.args = {
+  cardType: 'note',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  search: false,
-  activeColor: 'secondary',
+export const Twitter = Template.bind({});
+Twitter.args = {
+  cardType: 'twitter',
 };
 
-export const Tertiary = Template.bind({});
-Tertiary.args = {
-  search: false,
-  activeColor: 'tertiary',
+export const Article = Template.bind({});
+Article.args = {
+  cardType: 'article',
 };
