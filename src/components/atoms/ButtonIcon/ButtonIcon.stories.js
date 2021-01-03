@@ -20,7 +20,7 @@ const YellowBackground = styled.div`
 
 export default {
   component: ButtonIcon,
-  title: 'ButtonIcon',
+  title: '/Atoms/ButtonIcon',
   args: {
     active: false,
   },

@@ -1,6 +1,14 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-// import { withKnobs, select } from '@storybook/addon-knobs';
 import Heading from './Heading';
 
-storiesOf('Heading', module).add('Dupsko', () => <Heading>Hello Hutas</Heading>);
+export default {
+  component: Heading,
+  title: '/Atoms/Heading',
+};
+
+const Template = (args) => <Heading {...args}>Heading</Heading>;
+
+export const Normal = Template.bind({});
+Normal.args = {
+  search: false,
+};
