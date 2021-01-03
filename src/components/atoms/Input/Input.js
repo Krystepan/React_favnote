@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import magnifierIcon from '../../../assets/magnifier.svg';
+import magnifierIcon from '../../../assets/icons/magnifier.svg';
 
 const Input = styled.input`
   padding: 15px 30px;
@@ -21,7 +21,7 @@ const Input = styled.input`
       padding: 10px 20px 10px 40px;
       font-size: ${({ theme }) => theme.fontSize.xs};
       background-image: url(${magnifierIcon});
-      background-size: 20px;
+      background-size: 16px;
       background-position: 10px 50%;
       background-repeat: no-repeat;
     `}
