@@ -1,5 +1,16 @@
 import React from 'react';
+import UserPageTemplate from '../templates/UserPageTemplate';
+import Card from '../components/molecules/Card';
 
-const Notes = () => <h1>Notes View</h1>;
+const Notes = () => (
+  <UserPageTemplate pageType="note">
+    <Card cardType="note" />
+    <Card cardType="note" />
+    <Card cardType="note" />
+    <Card cardType="note" />
+    <Card cardType="note" />
+    <Card cardType="note" />
+  </UserPageTemplate>
+);
 
 export default Notes;

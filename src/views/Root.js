@@ -4,18 +4,17 @@ import MainTemplate from '../templates/MainTemplate';
 import Articles from './Articles';
 import Notes from './Notes';
 import Twitters from './Twitters';
-import Sidebar from '../components/organisms/Sidebar/Sidebar';
 
 const Root = () => (
-  <MainTemplate>
-    <BrowserRouter>
-      <Sidebar />
+  <BrowserRouter>
+    <MainTemplate>
       <Switch>
         <Route exact path="/" component={Notes} />
         <Route path="/articles" component={Articles} />
         <Route path="/twitters" component={Twitters} />
+        <Route path="/login" />
       </Switch>
-    </BrowserRouter>
-  </MainTemplate>
+    </MainTemplate>
+  </BrowserRouter>
 );
 export default Root;
